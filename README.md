@@ -5,3 +5,8 @@ start: 01:00
 3) Изучение похожих решений данной задачи:
 https://vaeum.com/2017/03/08/sozdaiem-tablitsu-s-sortirovkoi-strok-na-react-js/
 end: 02:00
+
+# set 2
+start: 00:00
+1) Настроил получение данных
+end: 03:00
