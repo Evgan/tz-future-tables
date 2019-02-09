@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import '../App.css'
 import PropTypes from 'prop-types'
 import GetDataContainer from '../containers/GetDataContainer'
+import PreloaderContainer from '../containers/PreloaderContainer'
 
 class App extends Component {
   static propTypes = {
@@ -17,7 +18,12 @@ class App extends Component {
   }
 
   render() {
-    return <div>{this.getComponents()}</div>
+    return (
+      <div className="App">
+        {' '}
+        {this.getComponents()} <PreloaderContainer />
+      </div>
+    )
   }
 }
 
