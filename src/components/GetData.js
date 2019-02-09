@@ -25,6 +25,7 @@ class GetData extends Component {
     )
   }
   render() {
+    console.log('RENDER GetData.js')
     return <div>{this.props.urlsGetData.map(this.createButtons)}</div>
   }
 }

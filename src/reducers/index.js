@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux'
-import { dataReducer } from './data'
 import { getDataReducer } from './getData'
 import { preloaderReducer } from './preloader'
+// import { dataHeaderReducer } from './table/dataHeader'
+import { dataBodyReducer } from './table/dataBody'
 
 export const rootReducer = combineReducers({
-  data: dataReducer,
+  //dataHeader: dataHeaderReducer,
+  dataBody: dataBodyReducer,
   getData: getDataReducer,
   preloader_my: preloaderReducer,
 })

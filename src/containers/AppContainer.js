@@ -11,7 +11,7 @@ class AppContainer extends Component {
 
 const mapStateToProps = store => {
   return {
-    data: store.data.data,
+    data: store.dataBody.data,
   }
 }
 

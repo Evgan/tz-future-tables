@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import '../css/Preloader.css'
 class Preloader extends Component {
   render() {
+    console.log('RENDER Preloader.js')
     return (
       <div id="floatingCirclesG">
         <div className="f_circleG" id="frotateG_01" />
