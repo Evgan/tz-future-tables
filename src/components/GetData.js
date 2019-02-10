@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import '../css/getData.scss'
 class GetData extends Component {
   constructor() {
     super()
@@ -26,7 +27,11 @@ class GetData extends Component {
   }
   render() {
     console.log('RENDER GetData.js')
-    return <div>{this.props.urlsGetData.map(this.createButtons)}</div>
+    return (
+      <div className="getData">
+        {this.props.urlsGetData.map(this.createButtons)}
+      </div>
+    )
   }
 }
 export default GetData

@@ -55,6 +55,11 @@ table {
         display: block;
         //height: 100px;
     }
+    tr.select{
+        td {
+            background: #4CAF50;
+        }
+    }
     $wT: 200px;
     th{
         width: $wT;
@@ -77,10 +82,24 @@ table {
     td:nth-child(5), th:nth-child(5){
         width: 150px;
     }
+}
 
+*:focus {
+    outline: 0;
+}
 
+.info-row{
+    width: 80%;
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
 
-
+    div{
+        background: #eeeeee;
+        padding: 20px;
+        display: inline-block;
+        text-align: left;
+    }
 }
 
 

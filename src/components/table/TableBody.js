@@ -3,23 +3,23 @@ import PropTypes from 'prop-types'
 class TableBody extends Component {
   static propTypes = {
     dataBody: PropTypes.array.isRequired,
+    selectRow: PropTypes.func.isRequired,
   }
 
   render() {
     console.log('RENDER TableBody.js')
 
-    //this.props.dataBody.map((itemRow, index) =>
-    //console.log(itemRow)
-    // element.map((item, i) => (
-    //   <td key={i}>{item}</td>
-    // ))
-    //)
-
     return (
       <tbody>
         {this.props.dataBody.map((element, index) => (
-          <tr key={index}>
-            {element.map((item, i) => (
+          <tr
+            key={index}
+            className={element.slass}
+            onClick={() =>
+              this.props.selectRow({ idSelectRow: element.data[0] })
+            }
+          >
+            {element.data.map((item, i) => (
               <td key={i}>{item}</td>
             ))}
           </tr>
