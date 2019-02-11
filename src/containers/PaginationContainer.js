@@ -19,7 +19,7 @@ class PaginationContainer extends Component {
 
 const mapStateToProps = store => {
   return {
-    pager: store.dataBody.pager,
+    pager: store.dataTable.pager,
   }
 }
 const mapDispatchToProps = dispatch => {

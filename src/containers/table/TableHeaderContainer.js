@@ -17,7 +17,7 @@ class TableHeaderContainer extends Component {
 
 const mapStateToProps = store => {
   return {
-    dataHeader: store.dataBody,
+    dataHeader: store.dataTable,
   }
 }
 const mapDispatchToProps = dispatch => {

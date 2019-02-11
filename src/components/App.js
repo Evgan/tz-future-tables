@@ -11,6 +11,7 @@ class App extends Component {
   static propTypes = {
     data: PropTypes.any.isRequired,
     fullDataSelectRow: PropTypes.object.isRequired,
+    pager: PropTypes.object.isRequired,
   }
 
   // Есть подозрения что данный подход отпределения какие компоненты когда должны "вступать в бой" не совсем корректен
@@ -20,7 +21,7 @@ class App extends Component {
         <div>
           <TableContainer />
           {this.props.fullDataSelectRow.id ? <InfoSelectRowContainer /> : null}
-          <PaginationContainer />
+          {this.props.pager.total > 1 ? <PaginationContainer /> : null}
         </div>
       )
     } else {

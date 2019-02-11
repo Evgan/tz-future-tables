@@ -5,14 +5,14 @@ import { selectRow } from '../../actions/tableActions'
 
 class TableBodyContainer extends Component {
   render() {
-    const { dataBody } = this.props.dataBody
+    const { dataBody } = this.props.dataTable
     return <TableBody dataBody={dataBody} selectRow={this.props.selectRow} />
   }
 }
 
 const mapStateToProps = store => {
   return {
-    dataBody: store.dataBody,
+    dataTable: store.dataTable,
   }
 }
 const mapDispatchToProps = dispatch => {

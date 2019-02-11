@@ -4,15 +4,18 @@ import App from '../components/App'
 
 class AppContainer extends Component {
   render() {
-    const { data, fullDataSelectRow } = this.props
-    return <App data={data} fullDataSelectRow={fullDataSelectRow} />
+    const { data, pager, fullDataSelectRow } = this.props
+    return (
+      <App data={data} pager={pager} fullDataSelectRow={fullDataSelectRow} />
+    )
   }
 }
 
 const mapStateToProps = store => {
   return {
-    data: store.dataBody.data,
-    fullDataSelectRow: store.dataBody.fullDataSelectRow,
+    data: store.dataTable.data,
+    fullDataSelectRow: store.dataTable.fullDataSelectRow,
+    pager: store.dataTable.pager,
   }
 }
 

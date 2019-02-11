@@ -11,7 +11,7 @@ class InfoSelectRowContainer extends Component {
 
 const mapStateToProps = store => {
   return {
-    fullDataSelectRow: store.dataBody.fullDataSelectRow,
+    fullDataSelectRow: store.dataTable.fullDataSelectRow,
   }
 }
 // const mapDispatchToProps = dispatch => {

@@ -31,20 +31,5 @@ export function getData(e) {
         }
       }
     )
-
-    // $.ajax(e.url)
-    //   .success(
-    //     dispatch({
-    //       type: GET_DATA_SUCCESS,
-    //       payload: response.photos,
-    //     })
-    //   )
-    //   .error(
-    //     dispatch({
-    //       type: GET_DATA_FAILURE,
-    //       payload: response.error,
-    //       error: true,
-    //     })
-    //   )
   }
 }

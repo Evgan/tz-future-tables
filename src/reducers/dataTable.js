@@ -1,11 +1,6 @@
 import sortJsonArray from 'sort-json-array'
-import { GET_DATA_FAILURE, GET_DATA_SUCCESS } from '../../actions/dataActions'
-import {
-  PAGE_CHANGED,
-  SELECT_ROW,
-  SORT_TABLE,
-} from '../../actions/tableActions'
-import { localData } from './localData'
+import { GET_DATA_FAILURE, GET_DATA_SUCCESS } from '../actions/dataActions'
+import { PAGE_CHANGED, SELECT_ROW, SORT_TABLE } from '../actions/tableActions'
 const TYPE_SORT_DEFAULT = 'default'
 const TYPE_SORT_ASC = 'asc'
 const TYPE_SORT_DESC = 'des'
@@ -13,7 +8,7 @@ const TYPE_SORT_DESC = 'des'
 const initialState = {
   data: [],
   dataBody: [],
-  maxRows: 10,
+  maxRows: 50,
   sliceStart: 0,
   sliceEnd: 0,
   tableColumns: [
@@ -24,9 +19,9 @@ const initialState = {
     { name: 'phone', sort: TYPE_SORT_DEFAULT },
   ],
   pager: {
-    total: 11,
+    total: 1,
     current: 1,
-    visiblePage: 3,
+    visiblePage: 5,
   },
   idSelectRow: '',
   fullDataSelectRow: {},
@@ -62,7 +57,7 @@ function getDataBody(data, i, maxRows, tableColumns, idSelectRow) {
 
 function initStatePager(pagerState, data, maxRows) {
   const total = Math.ceil(data.length / maxRows)
-  const visiblePage =
+  var visiblePage =
     total > pagerState.visiblePage ? pagerState.visiblePage : total
   return { ...pagerState, total: total, visiblePage: visiblePage }
 }
@@ -74,12 +69,14 @@ function SortByIdDes(x, y) {
   return y.id - x.id
 }
 
-export function dataBodyReducer(state = initialState, action) {
+export function dataTableReducer(state = initialState, action) {
   switch (action.type) {
     // ПОЛУЧИЛИ ИНФОРМАЦИ С СЕРВЕРА (основной массив данных)
-    case GET_DATA_SUCCESS:
     case GET_DATA_FAILURE:
-      const data = action.type === GET_DATA_SUCCESS ? action.payload : localData
+      return state
+
+    case GET_DATA_SUCCESS:
+      const data = action.payload
       const { sliceStart, sliceEnd, dataBody } = getDataBody(
         data,
         state.pager.current,
