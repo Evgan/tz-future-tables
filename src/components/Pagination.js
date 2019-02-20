@@ -14,7 +14,7 @@ export default class Pagination extends Component {
   }
 
   render() {
-    console.log('RENDER Pagination.js')
+    //console.log('RENDER Pagination.js')
     const { totalPages, currentPage, visiblePage, onChangePage } = this.props
     const buttons = []
 

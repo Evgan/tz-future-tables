@@ -45,3 +45,11 @@ end: 02:30
 start: 11:00
 1) Оптимизация 
 end: 13:00
+
+
+# ТЕСТЫ
+# Jest
+Что бы phpStorm понимал синтексис jest необходимо его установить:
+In Preferences | Languages & Frameworks | JavaScript | Libraries,
+ press Download..., select 'jest' from the list of available stubs, press Download and Install
+

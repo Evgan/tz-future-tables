@@ -7,7 +7,7 @@ class TableBody extends Component {
   }
 
   render() {
-    console.log('RENDER TableBody.js')
+    //console.log('RENDER TableBody.js')
 
     return (
       <tbody>

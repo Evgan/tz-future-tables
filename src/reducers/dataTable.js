@@ -1,5 +1,5 @@
 import sortJsonArray from 'sort-json-array'
-import { GET_DATA_FAILURE, GET_DATA_SUCCESS } from '../actions/dataActions'
+import { GET_DATA_SUCCESS } from '../actions/dataActions'
 import { PAGE_CHANGED, SELECT_ROW, SORT_TABLE } from '../actions/tableActions'
 const TYPE_SORT_DEFAULT = 'default'
 const TYPE_SORT_ASC = 'asc'
@@ -72,9 +72,6 @@ function SortByIdDes(x, y) {
 export function dataTableReducer(state = initialState, action) {
   switch (action.type) {
     // ПОЛУЧИЛИ ИНФОРМАЦИ С СЕРВЕРА (основной массив данных)
-    case GET_DATA_FAILURE:
-      return state
-
     case GET_DATA_SUCCESS:
       const data = action.payload
       const { sliceStart, sliceEnd, dataBody } = getDataBody(

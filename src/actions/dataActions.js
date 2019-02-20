@@ -19,9 +19,11 @@ export function getData(e) {
       },
       function(err, res, body) {
         if (err) {
+          const textError =
+            'При попытки получитьданные с сервера произошла ошибка: ' + err
           dispatch({
             type: GET_DATA_FAILURE,
-            payload: err,
+            payload: textError,
           })
         } else if (body) {
           dispatch({

@@ -30,7 +30,7 @@ class App extends Component {
   }
 
   render() {
-    console.log('RENDER App.js')
+    //console.log('RENDER App.js')
 
     return (
       <div className="App">

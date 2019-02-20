@@ -6,7 +6,6 @@ class InfoSelectRow extends Component {
   }
 
   render() {
-    console.log('RENDER InfoSelectRow.js')
     const {
       firstName,
       lastName,
@@ -20,9 +19,7 @@ class InfoSelectRow extends Component {
           <br />
           Описание:
           <br />
-          <textarea rows="4" cols="110">
-            {description}
-          </textarea>
+          <textarea readOnly={true} rows="4" cols="110" value={description} />
           <br />
           Адрес проживания: <b>{address.streetAddress}</b>
           <br />

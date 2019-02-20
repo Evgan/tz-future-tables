@@ -1,4 +1,8 @@
-import { GET_DATA_REQUEST, GET_DATA_SUCCESS } from '../actions/dataActions'
+import {
+  GET_DATA_FAILURE,
+  GET_DATA_REQUEST,
+  GET_DATA_SUCCESS,
+} from '../actions/dataActions'
 
 export const PRELOADER_SHOW = 'PRELOADER_SHOW'
 export const PRELOADER_HIDE = 'PRELOADER_HIDE'
@@ -14,6 +18,7 @@ export function preloaderReducer(state = initialState, action) {
         status: PRELOADER_SHOW,
       }
     case GET_DATA_SUCCESS:
+    case GET_DATA_FAILURE:
       return {
         ...state,
         status: PRELOADER_HIDE,

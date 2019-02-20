@@ -15,7 +15,7 @@ class TableHeader extends Component {
   // }
 
   render() {
-    console.log('RENDER TableHeader.js')
+    //onsole.log('RENDER TableHeader.js')
 
     return (
       <thead>
